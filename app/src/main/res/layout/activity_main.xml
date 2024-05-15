@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".guiuser.MainActivity">
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/darkred"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <ImageView
+            android:id="@+id/logo_imageview"
+            android:layout_width="73dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="Your logo"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="PC GAMING STORE"
+            android:textSize="25dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            />
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!-- Cart button -->
+            <ImageButton
+                android:id="@+id/cart_button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:scaleType="centerInside"
+                android:src="@drawable/cart2" />
+            <!-- Cart item count TextView -->
+            <TextView
+                android:id="@+id/cart_item_count_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/circle_background"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="0"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:layout_gravity="end|top" />
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/grey"
+        android:orientation="vertical">
+        <ViewFlipper
+            android:id="@+id/viewlipper"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:padding="16dp" />
+        <TextView
+            android:textSize="20sp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:text="LIST PRODUCT"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+        <ListView
+            android:id="@+id/product_list"
+            android:layout_width="match_parent"
+            android:layout_height="369dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/white"
+            android:choiceMode="singleChoice"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+    </LinearLayout>
+    <ImageButton
+        android:id="@+id/admin_manageproduct"
+        android:layout_width="50dp"
+        android:layout_height="58dp"
+        android:layout_gravity="center"
+        android:background="@drawable/user" />
+</LinearLayout>

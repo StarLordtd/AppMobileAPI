@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">restful</string>
+    <string name="product_image_description">Product image</string>
+    <string-array name="payment_methods">
+        <item>CASH</item>
+        <item>TRANSFER</item>
+    </string-array>
+    <string name="select_payment_method">Select Payment Method</string>
+
+</resources>
